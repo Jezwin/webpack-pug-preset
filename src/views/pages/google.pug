@@ -2,26 +2,26 @@ title Google
 head
   link(rel='icon', href=require('images/favicons/google.png'))
 body
-  div(style={height: '20px', background: 'white'})
-  div(style={height: '40px', background: 'white'})
+  //div(style={height: '20px', background: 'red'})
+  div(style={height: '60px', background: 'white', 'padding-top':'18px', 'padding-bottom':'0px'})
     span(style={position: 'absolute', right: '0pt'})
       a(class='headerlinks',href='#', style={padding: '0px 27px 0px 0px'}) Gmail
       a(class='headerlinks',href='#', style={padding: '0px 27px 0px 0px'}) Images
       a(class='headerlinks',href='#', style={padding: '0px 27px 0px 0px'}) Icon
-      input(class='signin',type='button', value='Sign in',style={width:'80px', background:'blue', color:'white'})
+      input(class='signin',type='button', value='Sign in',style={width:'74px', height:'30px', background:'blue', color:'white'})
       span(style={padding:'0px 0px 0px 27px'})
 
 
 
-  div(style={height: '160px'})
+  //div(style={height: '160px', background: 'red'})
   div
     center
-      img(src=require('images/others/googlelogo.png'), alt='google')
+      img(src=require('images/others/googlelogo.png'), alt='google', style={'padding-top':'160px'})
   div(style={height: '30px', background: 'white'})
   div(style={height: '67px', background: 'white'})
     center
       input(class='searchbar', type='text', style={height:'44px', width:'500px'})
-  div(style={height: '79px', background: 'white'})
+  div(id='123', style={height: '79px', 'background-color': 'white'})
     center
       input(class='button', type='button', value='Google Search', style={height:'36px', width:'138px'})
       span(style={padding:'0px 0px 0px 14px'})
@@ -29,26 +29,19 @@ body
   div(style={height: '79px', background: 'white'})
     center
       p Google offered in:
-        a(class='link', href='#', style={padding: '0px 0px 0px 12px'}) हिन्दी
-        a(class='link',href='#', style={padding: '0px 0px 0px 12px'} ) বাংলা
-        a(class='link',href='#', style={padding: '0px 0px 0px 12px'}) తెలుగు
-        a(class='link',href='#', style={padding: '0px 0px 0px 12px'}) मराठी
-        a(class='link',href='#', style={padding: '0px 0px 0px 12px'}) ગુજરાતી
-        a(class='link',href='#', style={padding: '0px 0px 0px 12px'}) தமிழ்
-        a(class='link',href='#', style={padding: '0px 0px 0px 12px'}) ಕನ್ನಡ
-        a(class='link',href='#', style={padding: '0px 0px 0px 12px'}) മലയാളം
-        a(class='link',href='#', style={padding: '0px 0px 0px 12px'}) ਪੰਜਾਬੀ
+        - var languageLinks = {'हिन्दी': '#', 'বাংলা': '#', 'తెలుగు': '#', 'मराठी': '#', 'ગુજરાતી': '#', 'தமிழ்': '#', 'ಕನ್ನಡ': '#', 'മലയാളം': '#', 'ਪੰਜਾਬੀ': '#'}
+        each val, index in languageLinks
+          a(class='link', href=val, style={padding: '0px 0px 0px 12px'})=index
 footer
   div(style={height: '45px', background: '#f2f2f2'})
     div(style={height: '10px', background: '#f2f2f2'})
-    a(class='otherlinks',href='#', style={padding: '0px 0px 0px 27px'}) India
+    a(class='otherlinks',href='#') India
   div(style={height: '45px', background: '#f2f2f2'})
     div(style={height: '10px', background: '#f2f2f2'})
-    a(class='otherlinks',href='#', style={padding: '0px 0px 0px 27px'}) Advertising
-    a(class='otherlinks',href='#', style={padding: '0px 0px 0px 27px'}) Business
-    a(class='otherlinks',href='#', style={padding: '0px 0px 0px 27px'}) About
-    a(class='otherlinks',href='#', style={padding: '0px 0px 0px 27px'}) How Search works
+    - var footerLeft = {'Advertising': '#', 'Business': '#', 'About': '#', 'How Search works': '#'}
+    each val, index in footerLeft
+      a(class='otherlinks',href=val)=index
     span(style={position: 'absolute', right: '0pt'})
-      a(class='otherlinks',href='#', style={padding: '0px 27px 0px 0px'}) Privacy
-      a(class='otherlinks',href='#', style={padding: '0px 27px 0px 0px'}) Terms
-      a(class='otherlinks',href='#', style={padding: '0px 27px 0px 0px'}) Settings
+      - var footerRight = {'Privacy': '#', 'Terms': '#', 'Settings': '#'}
+      each val, index in footerRight
+        a(class='otherlinks', href=val, style={padding: '0px 27px 0px 0px'})=index
