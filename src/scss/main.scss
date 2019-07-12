@@ -6,9 +6,10 @@
 
 // Bem example
 .page {
-  text-decoration: line-through;
+
   &__title {
     text-align: center;
+    text-decoration: line-through;
 
     &--color-red {
       color: $red;
@@ -18,6 +19,26 @@
       font-weight: bold;
     }
   }
+}
+
+.button {
+  border: 1px solid;
+  border-radius: 3px;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+}
+.button--state-signin {
+  background-color: #0000ff ;
+  border-color: #0000ff;
+  color: #ffffff;
+  font-weight: bold;
+  width: 74px;
+  height: 30px;
+}
+.button--state-search {
+  background-color: #f2f2f2;
+  border-color: #f2f2f2;
+  color: #5F6368;
 }
 
 
@@ -36,6 +57,7 @@
   font-family: arial,sans-serif;
   font-size: 15px;
   padding: 0px 0px 0px 27px;
+
 }
 .headerlinks {
   font-family: arial,sans-serif;
