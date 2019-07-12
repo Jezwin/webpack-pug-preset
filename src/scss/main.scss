@@ -50,6 +50,57 @@
   }
 }
 
+.searchform {
+  text-align: center;
+
+  &__div {
+
+    &--height-67px {
+      height: 67px;
+    }
+
+    &--height-79px {
+      height: 79px;
+    }
+  }
+
+  &__image {
+
+    padding-top:160px;
+    padding-bottom:30px;
+  }
+
+  &__searchbar {
+    height: 44px;
+    width: 500px;
+    border-radius: 20px;
+    border-color: 1px solid #f2f2f2;
+  }
+
+  &__button {
+    height: 36px;
+    width: 138px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    color: #5F6368;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+  }
+}
+
+.googleOfferedIn {
+  height: 68px;
+  text-align: center;
+
+  &__links {
+    color: blue;
+    font-family: arial,sans-serif;
+    font-size: 13px;
+    padding: 0px 0px 0px 12px;
+  }
+}
+
 .button {
   border: 1px solid;
   border-radius: 3px;

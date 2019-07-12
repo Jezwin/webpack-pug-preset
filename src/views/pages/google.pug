@@ -9,25 +9,20 @@ header
       a(class='header__nav',href='#') Icon
       input(class='header__button header__button--margin-right', type='button', value='Sign in')
 body
-  div
-    center
-      img(src=require('images/others/googlelogo.png'), alt='google', style={'padding-top':'160px', 'padding-bottom':'30px'})
-  div(style={height: '146px', background: 'white'})
+  .searchform
+    img(class='searchform__image',src=require('images/others/googlelogo.png'), alt='google')
     form
-      div(style={height: '67px', background: 'white'})
-        center
-          input(class='searchbar', type='text', style={height:'44px', width:'500px'})
-      div(id='123', style={height: '79px', 'background-color': 'white'})
-        center
-          input(class='button', type='button', value='Google Search', style={height:'36px', width:'138px'})
-          span(style={padding:'0px 0px 0px 14px'})
-          input(class='button',type='button', value="I'm Feeling Lucky", style={height:'36px', width:'138px'})
-  div(style={height: '68px', background: 'white'})
-    center
-      p Google offered in:
-        - var languageLinks = {'हिन्दी': '#', 'বাংলা': '#', 'తెలుగు': '#', 'मराठी': '#', 'ગુજરાતી': '#', 'தமிழ்': '#', 'ಕನ್ನಡ': '#', 'മലയാളം': '#', 'ਪੰਜਾਬੀ': '#'}
-        each val, index in languageLinks
-          a(class='link', href=val)=index
+      .searchform__div--height-67px
+        input(class='searchform__searchbar', type='text')
+      .searchform__div--height-79px
+        input(class='searchform__button', type='button', value='Google Search')
+        span(style={padding:'0px 0px 0px 14px'})
+        input(class='searchform__button',type='button', value="I'm Feeling Lucky")
+  .googleOfferedIn
+    p Google offered in:
+      - var languageLinks = {'हिन्दी': '#', 'বাংলা': '#', 'తెలుగు': '#', 'मराठी': '#', 'ગુજરાતી': '#', 'தமிழ்': '#', 'ಕನ್ನಡ': '#', 'മലയാളം': '#', 'ਪੰਜਾਬੀ': '#'}
+      each val, index in languageLinks
+        a(class='googleOfferedIn__links', href=val)=index
 footer
   div(style={height: '45px', background: '#f2f2f2'})
     div(style={height: '10px', background: '#f2f2f2'})
