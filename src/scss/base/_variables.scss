@@ -21,7 +21,7 @@ $grid-breakpoints: (
   xl: $screen-xl,
   xxl: $screen-xxl,
   xxxl: $screen-xxxl
-); 
+);
 
 $container-max-widths: (
   sm: 540px,
@@ -31,13 +31,14 @@ $container-max-widths: (
   xxl: (1200px + 160px),
   xxxl: (1395px + 30px)
 );
- 
+
 //
 // Color system
 //
 
 // stylelint-disable
 $white:    #fff !default;
+$gray-95:  #f2f2f2;
 $gray-100: #f6f6f6;
 $gray-200: #e2e0de;
 $gray-300: #dee2e6 !default;
@@ -51,6 +52,7 @@ $black:    #000 !default;
 
 $grays: () !default;
 $grays: map-merge((
+  "95":  $gray-95,
   "100": $gray-100,
   "200": $gray-200,
   "300": $gray-300,
@@ -62,7 +64,7 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue:    #1d507a;
+$blue:    #0000ff;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -73,9 +75,12 @@ $green:   #6cc0a4;
 $green-dark: #44546a;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+$white-smoke: #f1f1f1;
+$shuttle-gray: #5f6368;
 
 $colors: () !default;
 $colors: map-merge((
+  "$shuttle-gray": $shuttle-gray,
   "blue":       $blue,
   "indigo":     $indigo,
   "purple":     $purple,
@@ -90,7 +95,8 @@ $colors: map-merge((
   "white":      $white,
   "gray":       $gray-600,
   "gray-dark":  $gray-800,
-  "gray-darker": $gray-900
+  "gray-darker": $gray-900,
+  "white-smoke": $white-smoke
 ), $colors);
 
 $primary:       $yellow !default;
@@ -109,7 +115,7 @@ $theme-colors: map-merge((
   "secondary":  $secondary,
   "grey":       $gray-600,
   "gray-dark":  $gray-800,
-  "gray-darker": $gray-900, 
+  "gray-darker": $gray-900,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
@@ -139,14 +145,14 @@ $font-family-sans-serif:      'Raleway', sans-serif;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 $font-family-secondary:       $font-family-sans-serif;
-$headings-font-family:        $font-family-sans-serif; 
+$headings-font-family:        $font-family-sans-serif;
 
-$buttons-font-family: $font-family-secondary; 
+$buttons-font-family: $font-family-secondary;
 
 // stylelint-enable value-keyword-case
 
 $font-size-root: 			  18px;
-$font-size-root-sm: 14px; 
+$font-size-root-sm: 14px;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                ($font-size-base * 1.25) !default;
 $font-size-sm:                (17px / $font-size-root) * 1rem;
@@ -163,23 +169,23 @@ $line-height-base:            1.5;
 $headings-line-height:        1.3;
 $headings-font-weight:        $font-weight-light;
 
-$h1-font-size:                (40px / $font-size-root) * 1rem; 
-$h2-font-size:                (38px / $font-size-root) * 1rem; 
-$h3-font-size:                (30px / $font-size-root) * 1rem; 
-$h4-font-size:                (26px / $font-size-root) * 1rem; 
-$h5-font-size:                (24px / $font-size-root) * 1rem; 
+$h1-font-size:                (40px / $font-size-root) * 1rem;
+$h2-font-size:                (38px / $font-size-root) * 1rem;
+$h3-font-size:                (30px / $font-size-root) * 1rem;
+$h4-font-size:                (26px / $font-size-root) * 1rem;
+$h5-font-size:                (24px / $font-size-root) * 1rem;
 $h6-font-size:                $font-size-base !default;
 
-$lead-font-size:              (35px / $font-size-root) * 1rem; 
+$lead-font-size:              (35px / $font-size-root) * 1rem;
 $lead-font-weight:            300 !default;
 
-$small-font-size: (14px / $font-size-root) * 1rem; ; 
+$small-font-size: (14px / $font-size-root) * 1rem; ;
 
 
 $display1-size:               6rem !default;
 $display2-size:               5.5rem !default;
-$display3-size:               (20px / $font-size-root) * 1rem; 
-$display4-size:               (18px / $font-size-root) * 1rem; 
+$display3-size:               (20px / $font-size-root) * 1rem;
+$display4-size:               (18px / $font-size-root) * 1rem;
 
 $display1-weight:             300 !default;
 $display2-weight:             300 !default;
@@ -191,7 +197,7 @@ $display-line-height:         $headings-line-height !default;
 // Components
 //
 // components active
-$component-active-bg: $secondary; 
+$component-active-bg: $secondary;
 // Define common padding and border radius sizes and more.
 
 $line-height-lg:              1.5 !default;
@@ -210,14 +216,14 @@ $border-radius-sm:            (3px / $font-size-root) * 1rem;
 
 $input-btn-padding-y:         (10px / $font-size-root) * 1rem;
 $input-btn-padding-x:         (30px / $font-size-root) * 1rem;
-$input-btn-line-height:       1.3; 
+$input-btn-line-height:       1.3;
 
 $input-btn-padding-y-sm:      (8px / $font-size-root) * 1rem;
 $input-btn-padding-x-sm:      (22px / $font-size-root) * 1rem;
 $input-btn-line-height-sm:    1;
 
 $input-btn-padding-y-lg:      (20px / $font-size-root) * 1rem;
-$input-btn-padding-x-lg:      (60px / $font-size-root) * 1rem;  
+$input-btn-padding-x-lg:      (60px / $font-size-root) * 1rem;
 $input-btn-line-height-lg:    1;
 
 $input-btn-border-width:      $border-width !default;
@@ -263,6 +269,6 @@ $hr-margin-y: .8rem;
 // shadows
 $elevate-1: 0 0 2px 2px rgba($black, .075);
 
-$elevates: ( 
+$elevates: (
   'elevate-1': 0 5px 5px 2px rgba($black, .4)
 );

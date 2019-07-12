@@ -23,26 +23,26 @@
 
 .header {
   height: 60px;
-  padding-top: 18px;
   padding-bottom: 5px;
+  padding-top: 18px;
 
   &__nav {
-    padding: 0px 27px 0px 0px;
+    color: rgba(0, 0, 0, .87);
     font-family: arial, sans-serif;
     font-size: 14px;
-    color: rgba(0, 0, 0, .87);
+    padding: 0px 27px 0px 0px;
   }
 
   &__button {
-    border: 1px solid #0000ff;
+    background-color: $blue;
+    border: 1px solid $blue;
     border-radius: 3px;
+    color: $white;
     font-family: arial, sans-serif;
     font-size: 14px;
-    background-color: #0000ff ;
-    color: #ffffff;
     font-weight: bold;
-    width: 74px;
     height: 30px;
+    width: 74px;
 
     &--margin-right {
       margin-right: 27px;
@@ -65,27 +65,26 @@
   }
 
   &__image {
-
-    padding-top: 160px;
     padding-bottom: 30px;
+    padding-top: 160px;
   }
 
   &__searchbar {
+    border-color: 1px solid $gray-95;
+    border-radius: 20px;
     height: 44px;
     width: 500px;
-    border-radius: 20px;
-    border-color: 1px solid #f2f2f2;
   }
 
   &__button {
-    height: 36px;
-    width: 138px;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    background-color: $gray-95;
+    border: 1px solid $gray-95;
     border-radius: 3px;
-    color: #5f6368;
+    color: $shuttle-gray;
     font-family: arial, sans-serif;
     font-size: 14px;
+    height: 36px;
+    width: 138px;
   }
 }
 
@@ -94,7 +93,7 @@
   text-align: center;
 
   &__links {
-    color:  #0000ff;
+    color:  $blue;
     font-family: arial, sans-serif;
     font-size: 13px;
     padding: 0px 0px 0px 12px;
@@ -102,14 +101,13 @@
 }
 
 .footer {
-
-  background-color: #f2f2f2;
+  background-color: $gray-95;
 
   &__div {
 
     &--height-38px {
+      border-top: 1px solid $white-smoke;
       height: 38px;
-      border-top: 1px solid #f1f1f1;
     }
 
     &--height-10px {
@@ -124,6 +122,7 @@
     padding-left: 27px;
     //padding-top: 27px;
     //margin-top: 15px;
+
       &--paddingRight-27px {
         padding-left: 0px;
         padding-right: 27px;
