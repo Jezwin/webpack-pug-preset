@@ -3,36 +3,37 @@ head
   link(rel='icon', href=require('images/favicons/google.png'))
 header
   .header
-    span(style={position: 'absolute',right: '0pt'})
-      a(class='header__nav',href='#') Gmail
-      a(class='header__nav',href='#') Images
-      a(class='header__nav',href='#') Icon
-      input(class='header__button header__button--margin-right', type='button', value='Sign in')
+    span(style = {position: 'absolute',right: '0pt'})
+      a(class = 'header__nav', href = '#') Gmail
+      a(class = 'header__nav', href = '#') Images
+      a(class = 'header__nav', href = '#') Icon
+      input(class = 'header__button header__button--margin-right', type = 'button', value = 'Sign in')
 body
   .searchform
-    img(class='searchform__image',src=require('images/others/googlelogo.png'), alt='google')
+    img(class = 'searchform__image', src = require('images/others/googlelogo.png'), alt = 'google')
     form
       .searchform__div--height-67px
-        input(class='searchform__searchbar', type='text')
+        input(class = 'searchform__searchbar', type = 'text')
       .searchform__div--height-79px
-        input(class='searchform__button', type='button', value='Google Search')
+        input(class = 'searchform__button', type = 'button', value = 'Google Search')
         span(style={padding:'0px 0px 0px 14px'})
-        input(class='searchform__button',type='button', value="I'm Feeling Lucky")
+        input(class = 'searchform__button',type = 'button', value = "I'm Feeling Lucky")
   .googleOfferedIn
     p Google offered in:
       - var languageLinks = {'हिन्दी': '#', 'বাংলা': '#', 'తెలుగు': '#', 'मराठी': '#', 'ગુજરાતી': '#', 'தமிழ்': '#', 'ಕನ್ನಡ': '#', 'മലയാളം': '#', 'ਪੰਜਾਬੀ': '#'}
       each val, index in languageLinks
-        a(class='googleOfferedIn__links', href=val)=index
-footer
-  div(style={height: '45px', background: '#f2f2f2'})
-    div(style={height: '10px', background: '#f2f2f2'})
-    a(class='otherlinks',href='#') India
-  div(style={height: '45px', background: '#f2f2f2'})
-    div(style={height: '10px', background: '#f2f2f2'})
+        a(class = 'googleOfferedIn__links', href = val)= index
+
+.footer
+  .footer__div--height-38px
+    .footer__div--height-10px
+    a(class = 'footer__links', href = '#') India
+  .footer__div--height-38px
+    .footer__div--height-10px
     - var footerLeft = {'Advertising': '#', 'Business': '#', 'About': '#', 'How Search works': '#'}
     each val, index in footerLeft
-      a(class='otherlinks',href=val)=index
-    span(style={position: 'absolute', right: '0pt'})
+      a(class = 'footer__links', href = val)= index
+    span(style = {position: 'absolute', right: '0pt'})
       - var footerRight = {'Privacy': '#', 'Terms': '#', 'Settings': '#'}
       each val, index in footerRight
-        a(class='otherlinks', href=val, style={padding: '0px 27px 0px 0px'})=index
+        a(class = 'footer__links footer__links--paddingRight-27px', href=val)= index
