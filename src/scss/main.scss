@@ -28,15 +28,15 @@
 
   &__nav {
     padding: 0px 27px 0px 0px;
-    font-family: arial,sans-serif;
+    font-family: arial, sans-serif;
     font-size: 14px;
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, .87);
   }
 
   &__button {
     border: 1px solid #0000ff;
     border-radius: 3px;
-    font-family: arial,sans-serif;
+    font-family: arial, sans-serif;
     font-size: 14px;
     background-color: #0000ff ;
     color: #ffffff;
@@ -66,8 +66,8 @@
 
   &__image {
 
-    padding-top:160px;
-    padding-bottom:30px;
+    padding-top: 160px;
+    padding-bottom: 30px;
   }
 
   &__searchbar {
@@ -83,8 +83,8 @@
     background-color: #f2f2f2;
     border: 1px solid #f2f2f2;
     border-radius: 3px;
-    color: #5F6368;
-    font-family: arial,sans-serif;
+    color: #5f6368;
+    font-family: arial, sans-serif;
     font-size: 14px;
   }
 }
@@ -94,8 +94,8 @@
   text-align: center;
 
   &__links {
-    color: blue;
-    font-family: arial,sans-serif;
+    color:  #0000ff;
+    font-family: arial, sans-serif;
     font-size: 13px;
     padding: 0px 0px 0px 12px;
   }
@@ -118,8 +118,8 @@
   }
 
   &__links {
-    color: rgba(0,0,0,0.54);
-    font-family: arial,sans-serif;
+    color: rgba(0, 0, 0, 0.54);
+    font-family: arial, sans-serif;
     font-size: 15px;
     padding-left: 27px;
     //padding-top: 27px;
