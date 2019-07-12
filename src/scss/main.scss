@@ -21,6 +21,35 @@
   }
 }
 
+.header {
+  height: 60px;
+  padding-top: 18px;
+  padding-bottom: 5px;
+
+  &__nav {
+    padding: 0px 27px 0px 0px;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    color: rgba(0,0,0,.87);
+  }
+
+  &__button {
+    border: 1px solid #0000ff;
+    border-radius: 3px;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    background-color: #0000ff ;
+    color: #ffffff;
+    font-weight: bold;
+    width: 74px;
+    height: 30px;
+
+    &--margin-right {
+      margin-right: 27px;
+    }
+  }
+}
+
 .button {
   border: 1px solid;
   border-radius: 3px;

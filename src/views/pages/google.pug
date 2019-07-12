@@ -2,13 +2,12 @@ title Google
 head
   link(rel='icon', href=require('images/favicons/google.png'))
 header
-  div(style={height: '60px','padding-top':'18px', 'padding-bottom':'5px'})
-    span(style={position: 'absolute', right: '0pt'})
-      a(class='headerlinks',href='#', style={padding: '0px 27px 0px 0px'}) Gmail
-      a(class='headerlinks',href='#', style={padding: '0px 27px 0px 0px'}) Images
-      a(class='headerlinks',href='#', style={padding: '0px 27px 0px 0px'}) Icon
-      input(class='signin',type='button', value='Sign in',style={width:'74px', height:'30px', background:'blue', color:'white'})
-      span(style={padding:'0px 0px 0px 27px'})
+  .header
+    span(style={position: 'absolute',right: '0pt'})
+      a(class='header__nav',href='#') Gmail
+      a(class='header__nav',href='#') Images
+      a(class='header__nav',href='#') Icon
+      input(class='header__button header__button--margin-right', type='button', value='Sign in')
 body
   div
     center
